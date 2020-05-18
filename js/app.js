@@ -10,49 +10,49 @@ var seattle = {
     minCust: 23,
     maxCust: 65,
     avgSaleCookie: 6.3,
-   
+
 }
 
-    function numOfCustPerHour(min, max) {
-        for (var i = 0; i < hours.length; i++) {
-            randomCustPerHour.push(Math.floor(Math.random() * (max - min + 1)) + min);
-
-        }
-        console.log(randomCustPerHour);
+function numOfCustPerHour(min, max) {
+    for (var i = 0; i < hours.length; i++) {
+        randomCustPerHour.push(Math.floor(Math.random() * (max - min + 1)) + min);
 
     }
-     function numberOfCookie(custPerHour, avg) {
-        for (var i = 0; i < hours.length; i++) {
-            // numberOfCookie.push( randomCustPerHour[i]* this.avgSaleCookie);
-            numOfCookie[i] = Math.round(custPerHour[i] * avg);
+    console.log(randomCustPerHour);
 
-        }
-        console.log(numOfCookie);
+}
+function numberOfCookie(custPerHour, avg) {
+    for (var i = 0; i < hours.length; i++) {
+        // numberOfCookie.push( randomCustPerHour[i]* this.avgSaleCookie);
+        numOfCookie[i] = Math.round(custPerHour[i] * avg);
 
     }
-         function render() {
-            var div1 = document.getElementById('cookie');
-            var ul1 = document.createElement('ul');
-            div1.appendChild(ul1);
-            for (var i = 0; i <hours.length; i++) {
-                var li1 = document.createElement('li');
-                ul1.appendChild(li1);
-                var a = li1.textContent =hours[i]+` : `+ numOfCookie[i];
-            }
+    console.log(numOfCookie);
 
-        }
-        var totalAll = 0;
-        function total(){
-            for(var i = 0; i < numOfCookie.length; i++){
-               totalAll = totalAll + numOfCookie[i];
-            }
-            console.log(totalAll);
-        }
-        
+}
+function render() {
+    var div1 = document.getElementById('cookie');
+    var ul1 = document.createElement('ul');
+    div1.appendChild(ul1);
+    for (var i = 0; i < hours.length; i++) {
+        var li1 = document.createElement('li');
+        ul1.appendChild(li1);
+        var a = li1.textContent = hours[i] + ` : ` + numOfCookie[i];
+    }
+
+}
+var totalAll = 0;
+function total() {
+    for (var i = 0; i < numOfCookie.length; i++) {
+        totalAll = totalAll + numOfCookie[i];
+    }
+    console.log(totalAll);
+}
 
 
 
-    
+
+
 
 numOfCustPerHour(seattle.minCust, seattle.maxCust);
 numberOfCookie(randomCustPerHour, seattle.avgSaleCookie);
