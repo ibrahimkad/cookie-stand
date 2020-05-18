@@ -76,7 +76,7 @@ document.write(`the total is ${totalAll}`);
 
     //     }
     //     console.log(numOfCookie);
-
+//gggg
 
     //     render: function () {
     //         var div1 = document.getElementById('cookie');
